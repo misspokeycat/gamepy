@@ -1,203 +1,203 @@
 # 8-bit ops
-def incB():
+def incB(gb):
     return "INC B"
-def incD():
+def incD(gb):
     return "INC D"
-def incH():
+def incH(gb):
     return "INC H"
-def incHL_8():
+def incHL_8(gb):
     return "INC (HL)"
 
-def incC():
+def incC(gb):
     return "INC C"
-def incE():
+def incE(gb):
     return "INC E"
-def incL():
+def incL(gb):
     return "INC L"
-def incA():
+def incA(gb):
     return "INC A"
 
-def decB():
+def decB(gb):
     return "DEC B"
-def decD():
+def decD(gb):
     return "DEC D"
-def decH():
+def decH(gb):
     return "DEC H"
-def decHL_8():
+def decHL_8(gb):
     return "DEC (HL)"
 
-def decC():
+def decC(gb):
     return "DEC C"
-def decE():
+def decE(gb):
     return "DEC E"
-def decL():
+def decL(gb):
     return "DEC L"
-def decA():
+def decA(gb):
     return "DEC A"
 
-def addA_B():
+def addA_B(gb):
 	return "ADD A,B"
-def addA_C():
+def addA_C(gb):
 	return "ADD A,C"
-def addA_D():
+def addA_D(gb):
 	return "ADD A,D"
-def addA_E():
+def addA_E(gb):
 	return "ADD A,E"
-def addA_H():
+def addA_H(gb):
 	return "ADD A,H"
-def addA_L():
+def addA_L(gb):
 	return "ADD A,L"
-def addA_HL():
+def addA_HL(gb):
 	return "ADD A,(HL)"
-def addA_A():
+def addA_A(gb):
 	return "ADD A,A"
-def adcA_B():
+def adcA_B(gb):
 	return "ADD A,B"
-def adcA_C():
+def adcA_C(gb):
 	return "ADD A,C"
-def adcA_D():
+def adcA_D(gb):
 	return "ADC A,D"
-def adcA_E():
+def adcA_E(gb):
 	return "ADC A,E"
-def adcA_H():
+def adcA_H(gb):
 	return "ADC A,H"
-def adcA_L():
+def adcA_L(gb):
 	return "ADC A,L"
-def adcA_HL():
+def adcA_HL(gb):
 	return "ADC A,(HL)"
-def adcA_A():
+def adcA_A(gb):
 	return "ADC A,A"
-def subB():
+def subB(gb):
 	return "SUB B"
-def subC():
+def subC(gb):
 	return "SUB C"
-def subD():
+def subD(gb):
 	return "SUB D"
-def subE():
+def subE(gb):
 	return "SUB E"
-def subH():
+def subH(gb):
 	return "SUB H"
-def subL():
+def subL(gb):
 	return "SUB L"
-def subHL():
+def subHL(gb):
 	return "SUB HL"
-def subA():
+def subA(gb):
 	return "SUB A"
-def sbcA_B():
+def sbcA_B(gb):
 	return "SBC A,B"
-def sbcA_C():
+def sbcA_C(gb):
 	return "SBC A,C"
-def sbcA_D():
+def sbcA_D(gb):
 	return "SBC A,D"
-def sbcA_E():
+def sbcA_E(gb):
 	return "SBC A,E"
-def sbcA_H():
+def sbcA_H(gb):
 	return "SBC A,H"
-def sbcA_L():
+def sbcA_L(gb):
 	return "SBC A,L"
-def sbcA_HL():
+def sbcA_HL(gb):
 	return "SBA A,(HL)"
-def sbcA_A():
+def sbcA_A(gb):
 	return "SBC A,A"
-def andB():
+def andB(gb):
 	return "AND B"
-def andC():
+def andC(gb):
 	return "AND C"
-def andD():
+def andD(gb):
 	return "AND D"
-def andE():
+def andE(gb):
 	return "AND E"
-def andH():
+def andH(gb):
 	return "AND H"
-def andL():
+def andL(gb):
 	return "AND L"
-def andHL():
+def andHL(gb):
 	return "AND (HL)"
-def andA():
+def andA(gb):
 	return "AND A"
-def xorB():
+def xorB(gb):
 	return "XOR B"
-def xorC():
+def xorC(gb):
 	return "XOR C"
-def xorD():
+def xorD(gb):
 	return "XOR D"
-def xorE():
+def xorE(gb):
 	return "XOR E"
-def xorH():
+def xorH(gb):
 	return "XOR H"
-def xorL():
+def xorL(gb):
 	return "XOR L"
-def xorHL():
+def xorHL(gb):
 	return "XOR (HL)"
-def xorA():
+def xorA(gb):
 	return "XOR A"
-def orB():
+def orB(gb):
 	return "OR B"
-def orC():
+def orC(gb):
 	return "OR C"
-def orD():
+def orD(gb):
 	return "OR D"
-def orE():
+def orE(gb):
 	return "OR E"
-def orH():
+def orH(gb):
 	return "OR H"
-def orL():
+def orL(gb):
 	return "OR L"
-def orHL():
+def orHL(gb):
 	return "OR (HL)"
-def orA():
+def orA(gb):
 	return "OR A"
-def cpB():
+def cpB(gb):
 	return "CP B"
-def cpC():
+def cpC(gb):
 	return "CP C"
-def cpD():
+def cpD(gb):
 	return "CP D"
-def cpE():
+def cpE(gb):
 	return "CP E"
-def cpH():
+def cpH(gb):
 	return "CP H"
-def cpL():
+def cpL(gb):
 	return "CP L"
-def cpHL():
+def cpHL(gb):
 	return "CP (HL)"
-def cpA():
+def cpA(gb):
 	return "CP (A)"
 
 # 16-bit ops
-def incBC():
+def incBC(gb):
     return "INC BC"
-def incDE():
+def incDE(gb):
     return "INC DE"
-def incHL():
+def incHL(gb):
     return "INC HL"
-def incSP():
+def incSP(gb):
     return "INC SP"
 
-def addHL_BC():
+def addHL_BC(gb):
     return "ADD HL,BC"
-def addHL_DE():
+def addHL_DE(gb):
     return "ADD HL,DE"
-def addHL_HL():
+def addHL_HL(gb):
     return "ADD HL,HL"
-def addHL_SP():
+def addHL_SP(gb):
     return "ADD HL,SP"
 
-def decBC():
+def decBC(gb):
     return "DEC BC"
-def decDE():
+def decDE(gb):
     return "DEC DE"
-def decHL():
+def decHL(gb):
     return "DEC HL"
-def decSP():
+def decSP(gb):
     return "DEC SP"
 
 # Constants
-def adcA_P(param):
+def adcA_P(gb, param):
     return "ACD A," + hex(param)
-def sbcA_P(param):
+def sbcA_P(gb, param):
     return "SBC A," + hex(param)
-def xorP(param):
+def xorP(gb, param):
     return "XOR " + hex(param)
-def cpP(param):
+def cpP(gb, param):
     return "CP " + hex(param)

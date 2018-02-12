@@ -4,78 +4,82 @@ from gbops_stack import *
 from gbops_ld import *
 from gbops_arith import *
 
-def nop():
+def padhexa(s):
+    return '0x' + s[2:].zfill(2)
+
+
+def nop(gb):
     return "NOP"
 
-def stop(param):
+def stop(gb,param):
     return "STOP 0"
 
-def ldBC(param):
+def ldBC(gb,param):
     return "LD BC," + hex(param)
 
-def ldDE(param):
+def ldDE(gb,param):
     return "LD DE," + hex(param)
 
-def ldHL(param):
+def ldHL(gb,param):
     return "LD HL," + hex(param)
 
-def ldSP(param):
+def ldSP(gb,param):
     return "LD SP," + hex(param)
 
-def ldC(param):
+def ldC(gb,param):
     return "LD C," + hex(param)
 
-def ldA(param):
+def ldA(gb,param):
     return "LD A," + hex(param)
 
-def ldL(param):
+def ldL(gb,param):
     return "LD L," + hex(param)
 
-def ldE(param):
+def ldE(gb,param):
     return "LD E," + hex(param)
 
-def jrNZ(param):
+def jrNZ(gb,param):
     # param is relative, need to eventually account for this
     return "JR NZ " + hex(param)
 
-def ldhC_A(param):
-    return "LD $FF" + hex(param)[2:-2] + ",A"
+def ldhC_A(gb,param):
+    return "LD $FF" + padhexa(hex(param))[-2:] + ",A"
 
-def ldP_A(param):
-    return "LD $FF+" + hex(param)[2:-2] + ",C"
+def ldP_A(gb,param):
+    return "LD $FF" + padhexa(hex(param))[-2:] + ",C"
 
 # CB operations
-def cbOP(param):
+def cbOP(gb,param):
     return cbops[param]
 
-def call(param):
+def call(gb,param):
     return "CALL " + hex(param)
 
-def callZ(param):
+def callZ(gb,param):
     return "CALL Z," + hex(param)
 
-def callC(param):
+def callC(gb,param):
     return "CALL C," + hex(param)
 
-def jr(param):
+def jr(gb,param):
     return "JR, " + hex(param)
 
-def jrZ(param):
+def jrZ(gb,param):
     return "JR Z," + hex(param)
 
-def cp_P(param):
+def cp_P(gb,param):
     return "CP " + hex(param)
 
-def rlca():
+def rlca(gb):
     return "RLCA"
 
-def rla():
+def rla(gb):
     return "RLA"
 
-def ret():
+def ret(gb):
     return "RET"
 
-def reti():
+def reti(gb):
     return "RETI"
 
 opcode = {

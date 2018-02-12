@@ -1,17 +1,17 @@
-def pushBC():
+def pushBC(gb):
     return "PUSH BC"
-def pushDE():
+def pushDE(gb):
     return "PUSH DE"
-def pushHL():
+def pushHL(gb):
     return "PUSH HL"
-def pushAF():
+def pushAF(gb):
     return "PUSH AF"
 
-def popBC():
+def popBC(gb):
     return "POP BC"
-def popDE():
+def popDE(gb):
     return "POP DE"
-def popHL():
+def popHL(gb):
     return "POP HL"
-def popAF():
+def popAF(gb):
     return "POP AF"

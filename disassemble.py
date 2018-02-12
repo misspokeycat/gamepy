@@ -1,6 +1,9 @@
 import sys,getopt
 import code
 import gbops
+from gameboy import Gameboy
+
+gb = Gameboy()
 
 filename = None
 blocksize = 1024
@@ -11,8 +14,6 @@ for o,a in opts:
 		filename = a
 	if o == '-b':
 		blocksize = a
-
-# operations dict
 
 # load the file
 offset = 0
@@ -25,16 +26,16 @@ with open(filename,"rb") as f:
 		instruction = ord(block[current])
 		instlen = gbops.oplen[instruction]
 		if instlen == 1:
-			print(gbops.opcode[instruction]())
+			print(gbops.opcode[instruction](gb))
 			current += 1
 		elif instlen == 2:
 			param = ord(block[current + 1])
-			print(gbops.opcode[instruction](param))
+			print(gbops.opcode[instruction](gb,param))
 			current += 2
 		elif instlen == 3:
 			param = ord(block[current + 1]) + ord(block[current + 2])*256
 			#code.interact(local=locals())
-			print(gbops.opcode[instruction](param))
+			print(gb, gbops.opcode[instruction](gb,param))
 			current += 3
 		else:
 			current += 1
